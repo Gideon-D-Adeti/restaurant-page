@@ -20,6 +20,7 @@
     --shadow-style: 1px 2px 3px var(--main-bg);
 }
 
+
 /* Apply general styling and reset */
 html {
     box-sizing: border-box;
@@ -52,11 +53,6 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        margin-top: 15vh;
-    }
-}
 
 /* Style header element */
 header {
@@ -69,7 +65,14 @@ header {
     box-shadow: var(--shadow-style);
 }
 
-header button {
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--x-big);
+}
+
+header nav button {
     font: inherit;
     border: none;
     cursor: pointer;
@@ -78,17 +81,14 @@ header button {
     transition: transform 0.3s;
 }
 
-header button:nth-child(2) {
-    margin: auto var(--normal);
-}
-
-header button:hover {
+header nav button:hover {
     transform: scale(1.1);
 }
 
-header button:active {
+header nav button:active {
     transform: scale(0.9);
 }
+
 
 /* Style content div */
 #content {
@@ -107,6 +107,7 @@ img {
     margin: auto;
 }
 
+
 /* Style footer element */
 footer {
     padding: var(--normal);
@@ -123,4 +124,16 @@ footer .author {
 
 footer .author:hover {
     text-decoration: underline;
+}
+
+
+/* Add responsive styling */
+@media screen and (max-width: 768px) {
+    body {
+        margin-top: 15vh;
+    }
+
+    header nav {
+        gap: var(--big);
+    }
 }
