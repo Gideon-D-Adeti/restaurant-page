@@ -90,8 +90,8 @@ header nav button:active {
 }
 
 
-/* Style content div */
-#content {
+/* Style home div */
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,7 +99,7 @@ header nav button:active {
     padding: var(--big) var(--x-big);
 }
 
-img {
+.home img {
     width: 80vw;
     height: 60vh;
     display: block;
