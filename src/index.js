@@ -1,1 +1,5 @@
-console.log("Strange World...")
+import { loadHomePageContent } from "./modules/homepage.js";
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadHomePageContent();
+});
