@@ -1,0 +1,11 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "A restaurant web app built to practice my skills on DOM manipulation and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gideon D. Adeti",
+  "license": "ISC"
+}
