@@ -1,0 +1,126 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+
+/* Define custom variables */
+:root {
+    /* Colors */
+    --main-tc: #f5f5f5;
+    --main-bg: #171717;
+    --header-bg: #a1662f;
+
+    /* Standard px */
+    --xx-big: 64px;
+    --x-big: 32px;
+    --big: 16px;
+    --normal: 8px;
+    --small: 4px;
+
+    /* Others */
+    --shadow-style: 1px 2px 3px var(--main-bg);
+}
+
+/* Apply general styling and reset */
+html {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* Style body element */
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--main-tc);
+    background-color: var(--main-bg);
+    margin-top: 12.5vh;
+    margin-bottom: 6.25vh;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin-top: 15vh;
+    }
+}
+
+/* Style header element */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: var(--white-color);
+    background-color: var(--header-bg);
+    padding: var(--x-big);
+    box-shadow: var(--shadow-style);
+}
+
+header button {
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    padding: var(--small) var(--normal);
+    border-radius: var(--normal) var(--small);
+    transition: transform 0.3s;
+}
+
+header button:nth-child(2) {
+    margin: auto var(--normal);
+}
+
+header button:hover {
+    transform: scale(1.1);
+}
+
+header button:active {
+    transform: scale(0.9);
+}
+
+/* Style content div */
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--big);
+    padding: var(--big) var(--x-big);
+}
+
+img {
+    width: 80vw;
+    height: 60vh;
+    display: block;
+    object-fit: cover;
+    margin: auto;
+}
+
+/* Style footer element */
+footer {
+    padding: var(--normal);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+}
+
+footer .author {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer .author:hover {
+    text-decoration: underline;
+}
