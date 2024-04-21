@@ -1,4 +1,4 @@
-import "./assets/styles/index.css";
+import './index.css'
 import { loadHomePageContent } from "./modules/homepage.js";
 import { loadMenuPageContent } from "./modules/menupage.js";
 import { loadContactPageContent } from "./modules/contactpage.js";
