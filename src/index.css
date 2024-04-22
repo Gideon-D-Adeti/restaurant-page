@@ -91,7 +91,9 @@ header nav button:active {
 
 
 /* Style home div */
-.home {
+.home,
+.menu,
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,6 +107,32 @@ header nav button:active {
     display: block;
     object-fit: cover;
     margin: auto;
+}
+
+.menu img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.menu .foods {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: var(--x-big);
+}
+
+.foods div {
+    border: var(--normal) solid var(--header-bg);
+}
+
+.foods div h3 {
+    margin-top: var(--normal);
+    margin-bottom: var(--small);
+}
+
+.foods div p {
+    margin-bottom: var(--normal);
 }
 
 
@@ -135,5 +163,9 @@ footer .author:hover {
 
     header nav {
         gap: var(--big);
+    }
+
+    .menu .foods {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 }
