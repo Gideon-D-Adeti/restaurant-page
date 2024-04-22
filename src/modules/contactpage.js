@@ -2,14 +2,17 @@ export function loadContactPageContent() {
   const content = document.getElementById("content");
   content.innerHTML = "";
 
-  const contactInfo = document.createElement("div");
-  contactInfo.id = "contact-info";
+  const contactDiv = document.createElement("div");
+  contactDiv.classList.add("menu");
 
+  const headlineDiv = document.createElement("div");
   const headline = document.createElement("h2");
   headline.textContent = "Contact Us";
+  headlineDiv.appendChild(headline);
 
-  const paragraph = document.createElement("p");
-  paragraph.textContent =
+  const contactInfoDiv = document.createElement("div");
+  const contactInfo = document.createElement("p");
+  contactInfo.textContent =
     "We'd love to hear from you! Reach out to us through the following contact information:";
 
   const email = document.createElement("p");
@@ -20,11 +23,13 @@ export function loadContactPageContent() {
   address.innerHTML =
     "<strong>Address:</strong> 123 Main Street, City, Country";
 
-  contactInfo.appendChild(headline);
-  contactInfo.appendChild(paragraph);
-  contactInfo.appendChild(email);
-  contactInfo.appendChild(phone);
-  contactInfo.appendChild(address);
+  contactInfoDiv.appendChild(contactInfo);
+  contactInfoDiv.appendChild(email);
+  contactInfoDiv.appendChild(phone);
+  contactInfoDiv.appendChild(address);
 
-  content.appendChild(contactInfo);
+  contactDiv.appendChild(headlineDiv);
+  contactDiv.appendChild(contactInfoDiv);
+
+  content.appendChild(contactDiv);
 }
